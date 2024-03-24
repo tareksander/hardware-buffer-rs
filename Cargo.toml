@@ -1,0 +1,21 @@
+[package]
+name = "hardware-buffer"
+description = "Bindings for libandroid.so's AHardwareBuffer functions."
+version = "0.1.0"
+edition = "2021"
+readme = "Readme.md"
+license-file = "LICENSE"
+repository = "https://github.com/tareksander/hardware-buffer-rs"
+categories = ["api-bindings", "os"]
+keywords = ["HardwareBuffer", "AHardwareBuffer"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2.153"
+cstr = "0.2.11"
+lazy_static = "1.4.0"
+bytemuck = "1.14.1" 
+
+[build-dependencies]
+bindgen = "0.69.4"
