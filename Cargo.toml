@@ -1,10 +1,10 @@
 [package]
 name = "hardware-buffer"
 description = "Bindings for libandroid.so's AHardwareBuffer functions."
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 readme = "Readme.md"
-license-file = "LICENSE"
+license = "MPL-2.0"
 repository = "https://github.com/tareksander/hardware-buffer-rs"
 categories = ["api-bindings", "os"]
 keywords = ["HardwareBuffer", "AHardwareBuffer"]
