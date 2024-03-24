@@ -1,7 +1,7 @@
 [package]
 name = "hardware-buffer"
 description = "Bindings for libandroid.so's AHardwareBuffer functions."
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 readme = "Readme.md"
 license = "MPL-2.0"

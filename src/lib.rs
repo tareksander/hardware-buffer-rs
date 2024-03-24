@@ -1,3 +1,11 @@
+//! [HB] is an exposed singleton that dynamically loads libandroid.so on first access, reads the API version
+//! (accessible as [HBHolder::api_level]) and provides safe wrappers for the functions.  
+//!   
+//! [HBRef] is a reference-counted AHardwareBuffer pointer.  
+//!   
+//! All other types are generated from the NDK's hardware_buffer.h and dependent header files.
+
+
 use std::{ffi::CStr, mem::MaybeUninit, os::{fd::{AsRawFd, BorrowedFd}, unix::net::UnixStream}, ptr::{null, null_mut, NonNull}};
 
 use cstr::cstr;
@@ -17,7 +25,7 @@ mod hb_raw {
 pub use hb_raw::*;
 
 
-/// Singleton that holds the loaded libandroid functions and provides wrappers.
+/// Type of the singleton that holds the loaded libandroid functions
 #[allow(non_snake_case, dead_code)]
 pub struct HBHolder {
     /// The device API level. Some functions are only introduced in specific API levels.
